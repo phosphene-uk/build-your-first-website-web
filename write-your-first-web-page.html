@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Write your first web page · Build your first website</title>
+<meta name="description" content="Chapter 2 of Build your first website, free to read.">
+<meta name="author" content="Steve Hill">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles/book.css">
+<link rel="stylesheet" href="styles/web.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header"><div class="inner">
+<a href="index.html">Build your first website</a>
+<span class="imprint"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="6.8" stroke-width="3"/><circle cx="16" cy="16" r="11" stroke-width="1.2" opacity=".6"/><circle cx="16" cy="16" r="14.6" stroke-width=".9" opacity=".3"/></g></svg>Phosphene</span>
+</div></header>
+<main id="main">
+<div class="sect1">
+<h1 class="chapter-title" id="_write_your_first_web_page"><span class="label">Chapter 2</span>Write your first web page</h1>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A web page is a text file. When you visit a website, your browser asks another computer
+for that file, reads the instructions inside it and draws the page you see.</p>
+</div>
+<div class="paragraph">
+<p>You don&#8217;t need another computer to start. Your browser can read a file straight from
+your own computer, so you can write a page and see the result straight away. In this
+chapter, you&#8217;ll set up a place to work, write a page and try it in your browser. In
+the next, you&#8217;ll put it online.</p>
+</div>
+<div class="sect2">
+<h2 id="_install_a_code_editor">Install a code editor</h2>
+<div class="paragraph">
+<p>You&#8217;ll write your website&#8217;s files in a <em>code editor</em>: a text editor designed for
+writing code. We&#8217;ll use Visual Studio Code, usually called VS Code. It&#8217;s free, and it
+works on Windows and macOS.</p>
+</div>
+<div class="paragraph">
+<p>Go to <a href="https://code.visualstudio.com" class="bare">https://code.visualstudio.com</a>, download the version for your computer and
+install it as you would any other application. Then open it.</p>
+</div>
+<div class="paragraph">
+<p>You may wonder why you can&#8217;t use a word processor such as Microsoft Word. A word
+processor saves its own formatting inside the file, and a browser can&#8217;t read that.
+A code editor saves exactly the characters you type, and nothing else.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>VS Code is open. It may show a Welcome tab; you can close it.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_make_a_folder_for_your_website">Make a folder for your website</h2>
+<div class="paragraph">
+<p>Every file that makes up your website will live in one folder.</p>
+</div>
+<div class="paragraph">
+<p>Open File Explorer on Windows, or Finder on macOS. In your Documents folder, create a
+new folder called <code>my-website</code>.</p>
+</div>
+<div class="paragraph">
+<p>Back in VS Code, choose File → Open Folder and select <code>my-website</code>. VS Code may ask
+whether you trust the authors of the files in this folder. You&#8217;re the author, so
+choose the option to trust them.</p>
+</div>
+<div class="paragraph">
+<p>The panel down the left-hand side is the <em>Explorer</em>. It shows the files in the folder
+you&#8217;ve opened. At the moment, there aren&#8217;t any.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_create_your_first_page">Create your first page</h2>
+<div class="paragraph">
+<p>Hover over the folder&#8217;s name at the top of the Explorer, and click the New File
+button that appears. Name the file <code>index.html</code> and press Enter.</p>
+</div>
+<div class="paragraph">
+<p><code>index.html</code> is the name websites use for their home page. Use exactly that name, all
+in lower case, ending with <code>.html</code>. That ending tells the browser the file contains
+HTML.</p>
+</div>
+<div class="paragraph">
+<p><em>HTML</em> stands for Hypertext Markup Language. It describes the content of a page and
+how it&#8217;s organised. Type the following into the new file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;h1&gt;</span>My first webpage<span class="nt">&lt;/h1&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;</span>Welcome to my first webpage!<span class="nt">&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These two lines are HTML <em>elements</em>.</p>
+</div>
+<div class="paragraph">
+<p>Each element begins with an opening tag, such as <code>&lt;h1&gt;</code>, and ends with a closing tag,
+such as <code>&lt;/h1&gt;</code>. The <code>/</code> marks the closing tag. The words between the tags are the
+element&#8217;s content.</p>
+</div>
+<div class="paragraph">
+<p>The <code>h1</code> element marks up the page&#8217;s main heading. The <code>p</code> element marks up a
+paragraph.</p>
+</div>
+<div class="paragraph">
+<p>Now save the file: choose File → Save, or press Ctrl+S on Windows or Cmd+S on macOS.
+While a file has unsaved changes, VS Code shows a dot on its tab. The dot disappears
+when you save.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>The Explorer lists <code>index.html</code>. Its tab contains your two lines of HTML, with no dot
+showing unsaved changes.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/vscode-explorer.png" alt="VS Code with the my-website folder open. The Explorer on the left lists index.html, and the editor on the right shows its two lines: the h1 heading “My first webpage” and the paragraph “Welcome to my first webpage!”.">
+</div>
+<div class="title">Your first file in VS Code</div>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_open_the_page_in_your_browser">Open the page in your browser</h2>
+<div class="paragraph">
+<p>Find <code>index.html</code> in File Explorer or Finder, inside your <code>my-website</code> folder. Drag the
+file onto an open browser window.</p>
+</div>
+<div class="paragraph">
+<p>You can also right-click the file, choose Open With, and pick your browser. Use one of
+these methods rather than double-clicking: depending on your computer&#8217;s settings,
+double-clicking may open the file in VS Code instead.</p>
+</div>
+<div class="paragraph">
+<p>The browser shows “My first webpage” as a large heading, with “Welcome to my first
+webpage!” underneath it. The browser uses the tags to work out how to display each
+part of the page. It doesn&#8217;t show the tags themselves.</p>
+</div>
+<div class="paragraph">
+<p>Look at the address bar. Instead of a website&#8217;s address, it shows <code>file://</code>, followed
+by the location of the file on your computer. The browser is reading the file straight
+from your folder. Nobody else can see this page yet.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your browser shows the heading and the paragraph, without any tags. Its address starts
+with <code>file://</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/first-page.png" alt="The heading “Places I want to visit” in large black serif type, above the sentence “Some of the places I&#8217;d like to see, and why.”">
+</div>
+<div class="title">Your first page, opened from its file</div>
+</div>
+<div class="paragraph">
+<p>If you can see the tags on the page, check that the filename ends in <code>.html</code>, and that
+you saved the file.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_change_save_refresh">Change, save, refresh</h2>
+<div class="paragraph">
+<p>Let&#8217;s change the heading. Back in VS Code, change only the words between <code>&lt;h1&gt;</code> and
+<code>&lt;/h1&gt;</code>, so the line reads:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;h1&gt;</span>My very first webpage<span class="nt">&lt;/h1&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Save the file. Then switch to your browser and refresh the page, using the refresh
+button or by pressing F5 on Windows or Cmd+R on macOS.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>The heading now says “My very first webpage”. The paragraph hasn&#8217;t changed.</p>
+</div>
+<div class="paragraph">
+<p>Edit, save, refresh: you&#8217;ll repeat that cycle hundreds of times as you work through
+this book. If a change doesn&#8217;t appear, the first thing to check is whether you saved
+the file.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_make_the_page_your_own">Make the page your own</h2>
+<div class="paragraph">
+<p>Now choose what you&#8217;d like your website to be about. It could be places you want to
+visit, music you enjoy, or another subject you know well. Choose something you&#8217;re
+happy to share, because you&#8217;ll soon publish it.</p>
+</div>
+<div class="paragraph">
+<p>Replace the words between <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> with a heading for your subject. Replace
+the words between <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> with a sentence introducing it. Keep all the tags.</p>
+</div>
+<div class="paragraph">
+<p>Save, then refresh your browser.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your page shows your own heading and introductory sentence.</p>
+</div>
+<div class="paragraph">
+<p>Your first web page exists, but only on your computer. Next, you&#8217;ll put it online so
+that anyone can visit it.</p>
+</div>
+</div>
+</div>
+</div><nav class="chapter-nav" aria-label="Chapters"><a class="prev" href="welcome.html"><small>Previous</small>Welcome</a><a class="next" href="put-your-page-online.html"><small>Next</small>Put your page online</a></nav>
+</main>
+<footer class="site-footer"><div class="inner">
+<p>Build your first website, by Steve Hill. Published by Phosphene, <a href="https://phosphene.uk/">phosphene.uk</a>.</p>
+<p>Part 1 is free to read. The whole book continues in the paperback, PDF and ebook editions.</p>
+</div></footer>
+</body>
+</html>

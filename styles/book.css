@@ -1,0 +1,90 @@
+/* Shared by every edition: typefaces, colours, text, code, figures and Checkpoints. */
+
+@font-face { font-family: Literata; src: url(../fonts/Literata-Regular.woff); }
+@font-face { font-family: Literata; font-style: italic; src: url(../fonts/Literata-Italic.woff); }
+@font-face { font-family: Literata; font-weight: 600; src: url(../fonts/Literata-SemiBold.woff); }
+@font-face { font-family: Literata; font-weight: 600; font-style: italic; src: url(../fonts/Literata-SemiBoldItalic.woff); }
+@font-face { font-family: "JetBrains Mono"; src: url(../fonts/JetBrainsMono-Regular.woff); }
+@font-face { font-family: "JetBrains Mono"; font-weight: 700; src: url(../fonts/JetBrainsMono-Bold.woff); }
+@font-face { font-family: "JetBrains Mono"; font-style: italic; src: url(../fonts/JetBrainsMono-Italic.woff); }
+@font-face { font-family: Lilita; src: url(../fonts/LilitaOne-Regular.woff2); }
+@font-face { font-family: Akatab; src: url(../fonts/Akatab-Regular.woff2); }
+@font-face { font-family: Akatab; font-weight: 700; src: url(../fonts/Akatab-Bold.woff2); }
+@font-face { font-family: Caveat; src: url(../fonts/Caveat.woff2); }
+/* Only the 🌳 used in the favicon example, cut from Noto Color Emoji. */
+@font-face { font-family: "Noto Color Emoji"; src: url(../fonts/NotoColorEmoji-Tree.ttf); unicode-range: U+1F333; }
+
+:root {
+  --slate: #394e65;
+  --ink: #162a40;
+  --citron: #eced9f;
+  --citron-pale: #f7f7d4;
+  --code-bg: #f6f6ef;
+  --rule: #c9ccd1;
+  --body: Literata, "Noto Color Emoji", serif;
+  --sans: Akatab, sans-serif;
+  --display: Lilita, sans-serif;
+  --mono: "JetBrains Mono", "Noto Color Emoji", monospace;
+}
+
+html { font-family: var(--body); font-size: 10pt; line-height: 1.5; color: var(--ink); }
+p { margin: 0 0 0.6em; }
+strong { font-weight: 600; }
+a { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.2; color: var(--ink); hyphens: manual; }
+h3 { font-size: 14pt; margin: 1.4em 0 0.4em; }
+h4 { font-size: 11.5pt; margin: 1.2em 0 0.3em; }
+
+ul, ol { margin: 0 0 0.7em; padding-left: 1.4em; }
+li { margin-bottom: 0.25em; }
+li p { margin: 0; }
+
+code { font-family: var(--mono); font-size: 0.86em; hyphens: none; }
+p code, li code, td code, dd code, dt code { background: var(--code-bg); padding: 0 0.15em; border-radius: 2px; }
+.listingblock { margin: 0.4em 0 0.9em; }
+.listingblock pre {
+  font-size: 8.4pt; line-height: 1.45; margin: 0; padding: 0.55em 0.8em;
+  background: var(--code-bg); border-left: 2.5pt solid var(--slate);
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.listingblock pre code { font-size: 1em; }
+.listingblock .line { display: block; }
+/* JetBrains Mono joins => and similar pairs into one symbol, which a beginner would copy. */
+code, pre { font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga" 0; }
+
+.imageblock { margin: 0.8em 0 1.1em; }
+.imageblock img { display: block; width: 100%; height: auto; border: 0.5pt solid var(--rule); }
+.imageblock .title { font: 8.5pt/1.35 var(--sans); color: var(--slate); margin-top: 0.4em; }
+
+/* Checkpoints are paragraphs titled "Checkpoint". */
+.paragraph > .title {
+  font: 15pt/1 Caveat, cursive; color: var(--slate); margin-bottom: 0.15em;
+}
+.paragraph:has(> .title) {
+  background: var(--citron-pale); border-radius: 4pt; padding: 0.45em 0.8em 0.35em; margin: 0.9em 0 1em;
+}
+.paragraph:has(> .title) p { margin: 0; }
+
+.admonitionblock { margin: 0.9em 0; border-left: 2.5pt solid var(--citron); padding-left: 0.8em; }
+.admonitionblock table, .admonitionblock tr, .admonitionblock td { display: block; padding: 0; }
+.admonitionblock .icon .title { font: 700 8.5pt var(--sans); text-transform: uppercase; letter-spacing: 0.06em; color: var(--slate); }
+
+table.tableblock { width: 100%; border-collapse: collapse; margin: 0.6em 0 1em; font-size: 9pt; }
+table.tableblock th, table.tableblock td { text-align: left; vertical-align: top; padding: 0.3em 0.5em 0.3em 0; border-bottom: 0.5pt solid var(--rule); }
+table.tableblock th { font: 700 8.5pt var(--sans); color: var(--slate); }
+table.tableblock p { margin: 0; }
+
+.dlist dt { font-weight: 600; margin-top: 0.6em; }
+.dlist dd { margin: 0.1em 0 0 1.4em; }
+
+.partintro { font-size: 11pt; }
+
+/* Rouge, in colours that stay distinct when printed. */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs { color: #5e6b78; font-style: italic; }
+.highlight .nt, .highlight .nc, .highlight .nf, .highlight .nn { color: #1d4f91; }
+.highlight .na, .highlight .py, .highlight .nv { color: #8a3b12; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sd, .highlight .sr, .highlight .dl { color: #2f6b3a; }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh, .highlight .il { color: #9b2c55; }
+.highlight .k, .highlight .kd, .highlight .kr, .highlight .kc, .highlight .kn, .highlight .kt, .highlight .nb, .highlight .bp { color: #6b2fa0; }
+.highlight .err { color: inherit; }

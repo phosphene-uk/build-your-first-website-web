@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grow your website · Build your first website</title>
+<meta name="description" content="Chapter 4 of Build your first website, free to read.">
+<meta name="author" content="Steve Hill">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles/book.css">
+<link rel="stylesheet" href="styles/web.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header"><div class="inner">
+<a href="index.html">Build your first website</a>
+<span class="imprint"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="6.8" stroke-width="3"/><circle cx="16" cy="16" r="11" stroke-width="1.2" opacity=".6"/><circle cx="16" cy="16" r="14.6" stroke-width=".9" opacity=".3"/></g></svg>Phosphene</span>
+</div></header>
+<main id="main">
+<div class="sect1">
+<h1 class="chapter-title" id="_grow_your_website"><span class="label">Chapter 4</span>Grow your website</h1>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Your page has a heading and two paragraphs. In this chapter, you&#8217;ll give it more
+structure, link it to other websites, and add a second page. You&#8217;ll work on your
+computer throughout, checking each change in your browser, and publish everything
+at the end.</p>
+</div>
+<div class="paragraph">
+<p>Keep VS Code and your browser open side by side if your screen has room. After each
+change, save the file and refresh the browser.</p>
+</div>
+<div class="sect2">
+<h2 id="_add_a_subheading">Add a subheading</h2>
+<div class="paragraph">
+<p>Let&#8217;s give your second paragraph a heading of its own, so readers can see what that
+part of the page is about.</p>
+</div>
+<div class="paragraph">
+<p>The main heading uses <code>h1</code>. For a heading one level below it, use <code>h2</code>. The number
+describes where the heading belongs in the page&#8217;s structure, not how big it looks.</p>
+</div>
+<div class="paragraph">
+<p>Between your two paragraphs, on a new line, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;h2&gt;</span>Places on my list<span class="nt">&lt;/h2&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Change the words to suit your subject and the paragraph that follows. If your page is
+about music, you might use “Bands I want to see”.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>After you save and refresh, your page shows the main heading, the first paragraph,
+the new subheading and the second paragraph, in that order.</p>
+</div>
+<div class="paragraph">
+<p>You can use several <code>h2</code> headings if you add more sections later. Keep one <code>h1</code> for
+the page&#8217;s main heading.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_make_a_list">Make a list</h2>
+<div class="paragraph">
+<p>Some things are easier to read as a list. HTML has an <em>unordered list</em> element, <code>ul</code>,
+for items that don&#8217;t need numbering. Each entry goes inside a <em>list item</em> element,
+<code>li</code>.</p>
+</div>
+<div class="paragraph">
+<p>After your second paragraph, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;ul&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;li&gt;</span>York<span class="nt">&lt;/li&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;li&gt;</span>Edinburgh<span class="nt">&lt;/li&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;li&gt;</span>Bath<span class="nt">&lt;/li&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>ul</code> tags surround the whole list. Each item has its own pair of <code>li</code> tags.</p>
+</div>
+<div class="paragraph">
+<p>The spaces before each <code>&lt;li&gt;</code> are <em>indentation</em>. They make it easier to see that the
+items belong inside the list, and they don&#8217;t appear on the page.</p>
+</div>
+<div class="paragraph">
+<p>Replace the three place names with entries for your subject.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your page shows three entries with bullet points beneath the second paragraph. The
+browser adds the bullets; you didn&#8217;t need to type them.</p>
+</div>
+<div class="paragraph">
+<p>Try adding a fourth item yourself, after the third and before <code>&lt;/ul&gt;</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_link_to_another_website">Link to another website</h2>
+<div class="paragraph">
+<p>A link takes someone from your page to another page when they click or tap it. HTML
+uses the <code>a</code> element for links. Here&#8217;s a paragraph containing one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;</span>Find out more about <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://visityork.org/"</span><span class="nt">&gt;</span>visiting York<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The words “visiting York” are the <em>link text</em>: the part someone clicks. The rest of the
+sentence is ordinary paragraph text.</p>
+</div>
+<div class="paragraph">
+<p>The opening tag contains something new: <code>href</code>. This is an <em>attribute</em>, which gives
+extra information about an element. Here, its value is the address the link leads to.
+The value goes after an equals sign, inside straight double quotes. The closing tag is
+still just <code>&lt;/a&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>Add the paragraph after your list. Then change it to suit your subject: visit a
+website you&#8217;d like to link to, copy its address from your browser&#8217;s address bar, and
+paste it between the quotes in place of the York address. Change the sentence and the
+link text to match.</p>
+</div>
+<div class="paragraph">
+<p>Choose link text that tells the reader where they&#8217;ll go. “Visiting York” tells them
+much more than “click here”.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Clicking the link takes you to the website you chose. Your browser&#8217;s Back button
+returns you to your page.</p>
+</div>
+<div class="paragraph">
+<p>If the link goes to the wrong place, check the address inside <code>href</code>. If it isn&#8217;t a
+link at all, compare the tags and quotes with the example.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_put_a_link_in_your_list">Put a link in your list</h2>
+<div class="paragraph">
+<p>Elements can go inside other elements. Putting one element inside another is called
+<em>nesting</em>. To make a list item into a link, put an <code>a</code> element inside the <code>li</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"https://visityork.org/"</span><span class="nt">&gt;</span>York<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>li</code> opens first, then the <code>a</code>. The link closes before the list item does.</p>
+</div>
+<div class="paragraph">
+<p>Choose one of your list items and make it into a link to a website about that item.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>The item is still part of your bulleted list, but its words are now a link that opens
+the website you chose.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_create_a_second_page">Create a second page</h2>
+<div class="paragraph">
+<p>Your links can lead to pages you&#8217;ve made yourself. Let&#8217;s add an About page explaining
+what your website is for.</p>
+</div>
+<div class="paragraph">
+<p>In VS Code, create a new file in your <code>my-website</code> folder, next to <code>index.html</code>. Call
+it <code>about.html</code> and enter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;h1&gt;</span>About this website<span class="nt">&lt;/h1&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;</span>This is where I collect things I want to share.<span class="nt">&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Change the paragraph to explain your website&#8217;s subject. This is a separate page, so it
+has its own main heading.</p>
+</div>
+<div class="paragraph">
+<p>Save the file and open it in your browser, in the same way as you opened <code>index.html</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_link_the_two_pages_together">Link the two pages together</h2>
+<div class="paragraph">
+<p>At the end of <code>index.html</code>, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"about.html"</span><span class="nt">&gt;</span>About this website<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The address in this link is just a filename. It&#8217;s a <em>relative address</em>: the browser
+looks for <code>about.html</code> in the same folder as the page you&#8217;re viewing. That works on
+your computer, and it will keep working once both files are published together.</p>
+</div>
+<div class="paragraph">
+<p>Then, at the end of <code>about.html</code>, add a link back:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;</span>Back to the home page<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Open <code>index.html</code> in your browser. You can follow the link to your About page, and
+the link back to your home page.</p>
+</div>
+<div class="paragraph">
+<p>If either link doesn&#8217;t work, check that the filename in <code>href</code> exactly matches the
+file&#8217;s name, including lower-case letters and the <code>.html</code> ending, and that both files
+are in the same folder.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_give_the_page_a_title">Give the page a title</h2>
+<div class="paragraph">
+<p>So far, you&#8217;ve written the content people read. HTML also has a place for information
+about the page, such as the title on the browser tab.</p>
+</div>
+<div class="paragraph">
+<p>In <code>index.html</code>, add these lines before your first <code>&lt;h1&gt;</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="cp">&lt;!doctype html&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;head&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;title&gt;</span>My website<span class="nt">&lt;/title&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;/head&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;body&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Change “My website” to a title for your website. Then, at the very end of the file,
+after everything else, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;/body&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;/html&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your existing content now sits between <code>&lt;body&gt;</code> and <code>&lt;/body&gt;</code>. Here&#8217;s what each new
+part does:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;!doctype html&gt;</code> tells the browser to follow current web standards, rather than
+older compatibility rules. It isn&#8217;t an element, so it has no closing tag. It always
+goes on the first line.</p>
+</li>
+<li>
+<p><code>html</code> surrounds the whole document. Its <code>lang="en"</code> attribute says the page is in
+English, which helps tools such as screen readers pronounce the text correctly.</p>
+</li>
+<li>
+<p><code>head</code> holds information about the page. It isn&#8217;t the heading at the top of the page;
+that&#8217;s still your <code>h1</code>.</p>
+</li>
+<li>
+<p><code>title</code> gives the page a name for the browser tab. It belongs inside <code>head</code>.</p>
+</li>
+<li>
+<p><code>body</code> holds the content people read: everything you&#8217;ve written so far.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>After you save and refresh, the browser tab shows your title. Your page&#8217;s content
+hasn&#8217;t changed.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_help_the_browser_read_the_page">Help the browser read the page</h2>
+<div class="paragraph">
+<p>Two more lines give the browser useful information. Immediately after <code>&lt;head&gt;</code>, before
+<code>&lt;title&gt;</code>, add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first line sets the <em>character encoding</em>: how the browser should turn the stored
+file into text. UTF-8 covers text in almost every language, including accented
+letters.</p>
+</div>
+<div class="paragraph">
+<p>The second line describes the <em>viewport</em>, the area of a browser that displays the
+page. These settings ask a phone or tablet to use its own screen width, rather than
+showing a wide page shrunk down to fit. Visitors can still zoom in.</p>
+</div>
+<div class="paragraph">
+<p><code>meta</code> is a <em>void element</em>: it doesn&#8217;t wrap any content, so it has no closing tag.</p>
+</div>
+<div class="paragraph">
+<p>The start of your file should now look like this, with your own title:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="cp">&lt;!doctype html&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;head&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1"</span><span class="nt">&gt;</span>
+</span><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;title&gt;</span>My website<span class="nt">&lt;/title&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;/head&gt;</span>
+</span><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;body&gt;</span>
+</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_give_each_page_its_own_title">Give each page its own title</h2>
+<div class="paragraph">
+<p>The About page needs the same structure. In <code>about.html</code>, add the same opening lines
+before its heading, and <code>&lt;/body&gt;</code> and <code>&lt;/html&gt;</code> at the end.</p>
+</div>
+<div class="paragraph">
+<p>Change its title so it names the page as well as the website. For a website called
+“Places I want to visit”, you could use:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 4ch; text-indent: -4ch">  <span class="nt">&lt;title&gt;</span>About - Places I want to visit<span class="nt">&lt;/title&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Edit the existing <code>title</code> element rather than adding a second one.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Each page shows its own title on the browser tab. You can still follow the links
+between them.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_publish_your_changes">Publish your changes</h2>
+<div class="paragraph">
+<p>Your website has grown on your computer, but the published version still has just
+two paragraphs. Let&#8217;s publish everything at once.</p>
+</div>
+<div class="paragraph">
+<p>In your repository on GitHub, choose “Add file”, then “Upload files”. Drag both
+<code>index.html</code> and <code>about.html</code> from your <code>my-website</code> folder onto the upload area.
+GitHub replaces the existing <code>index.html</code> and adds the new <code>about.html</code>.</p>
+</div>
+<div class="paragraph">
+<p>Enter a commit message such as <code>Add a list, links and an About page</code>, and commit the
+change.</p>
+</div>
+<div class="paragraph">
+<p>Wait for it to publish, then visit your website from its bookmark. Check it over:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read your headings, paragraphs and list. Are they the words you meant to publish?</p>
+</li>
+<li>
+<p>Follow each link to another website, using Back to return.</p>
+</li>
+<li>
+<p>Follow the link to your About page, then the link back.</p>
+</li>
+<li>
+<p>Check each page&#8217;s title on its browser tab.</p>
+</li>
+<li>
+<p>If you have a phone, open your website on it too.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your published website has two linked pages, each with its own title, and the links
+to other websites work.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/grow-your-website.png" alt="A plain page in black serif type: the main heading, an introduction, a subheading, a paragraph, a bulleted list of four places with two of them as blue links, a link about visiting York, and a link to the About page.">
+</div>
+<div class="title">The home page at the end of Part 1</div>
+</div>
+<div class="paragraph">
+<p>If something needs correcting, fix it on your computer, check it in your browser and
+upload the changed file again. Your website stays online without your computer or
+browser being open.</p>
+</div>
+<div class="paragraph">
+<p>In the next part, you&#8217;ll start changing how your website looks, using CSS to choose
+its colours, type and spacing.</p>
+</div>
+</div>
+</div>
+</div><section class="end-of-sample"><h2>That’s the end of Part 1</h2>
+<p>Your website is online, with two pages and an address you can share. Part 2 carries on from here, with styles, structure and the browser’s developer tools, in the paperback, PDF and ebook editions.</p>
+<p><a href="index.html">See everything the full book covers</a></p></section>
+<nav class="chapter-nav" aria-label="Chapters"><a class="prev" href="put-your-page-online.html"><small>Previous</small>Put your page online</a></nav>
+</main>
+<footer class="site-footer"><div class="inner">
+<p>Build your first website, by Steve Hill. Published by Phosphene, <a href="https://phosphene.uk/">phosphene.uk</a>.</p>
+<p>Part 1 is free to read. The whole book continues in the paperback, PDF and ebook editions.</p>
+</div></footer>
+</body>
+</html>

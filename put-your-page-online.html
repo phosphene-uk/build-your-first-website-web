@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Put your page online · Build your first website</title>
+<meta name="description" content="Chapter 3 of Build your first website, free to read.">
+<meta name="author" content="Steve Hill">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles/book.css">
+<link rel="stylesheet" href="styles/web.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header"><div class="inner">
+<a href="index.html">Build your first website</a>
+<span class="imprint"><svg viewBox="0 0 32 32" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="16" cy="16" r="6.8" stroke-width="3"/><circle cx="16" cy="16" r="11" stroke-width="1.2" opacity=".6"/><circle cx="16" cy="16" r="14.6" stroke-width=".9" opacity=".3"/></g></svg>Phosphene</span>
+</div></header>
+<main id="main">
+<div class="sect1">
+<h1 class="chapter-title" id="_put_your_page_online"><span class="label">Chapter 3</span>Put your page online</h1>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you visit a website, your browser sends a request to the address you&#8217;ve typed.
+A computer at that address, called a <em>server</em>, answers by sending back the files for
+the page. Your browser then displays them.</p>
+</div>
+<div class="paragraph">
+<p>Your page&#8217;s <code>file://</code> address only works on your computer. To let other people see it,
+you need to put a copy on a server that&#8217;s always switched on and connected to the
+internet. You&#8217;ll use <em>GitHub Pages</em>, which does this for free.</p>
+</div>
+<div class="sect2">
+<h2 id="_create_your_free_github_account">Create your free GitHub account</h2>
+<div class="paragraph">
+<p>GitHub is a website for storing and sharing the files that make up a project. You&#8217;ll
+keep a copy of your website&#8217;s files there, and GitHub Pages will publish them.</p>
+</div>
+<div class="paragraph">
+<p>If you already have a GitHub account, you can skip to the next section.</p>
+</div>
+<div class="paragraph">
+<p>Go to <a href="https://github.com" class="bare">https://github.com</a> and click “Sign up”. At the time of writing, the form asks
+for your email address, a password, a username and your country or region.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/github-signup.png" alt="GitHub&#8217;s Sign up for GitHub page. Beside the heading Create your free account, the form offers Continue with Google and Continue with Apple, then fields for Email, Password, Username and Your Country/Region, and a green Create account button.">
+</div>
+<div class="title">GitHub&#8217;s sign-up form</div>
+</div>
+<div class="paragraph">
+<p>Choose your username carefully. It will become part of your website&#8217;s address, so
+pick something you&#8217;re happy for other people to see.</p>
+</div>
+<div class="paragraph">
+<p>Click “Create account”. GitHub sends a code to your email address; enter it to verify
+your account, then sign in.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>You&#8217;re signed in to GitHub and can see your dashboard.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_keep_your_account_secure">Keep your account secure</h2>
+<div class="paragraph">
+<p>GitHub may ask you to turn on <em>two-factor authentication</em>. This adds a second check
+when you sign in, usually a code from an authenticator app on your phone, so a
+stolen password isn&#8217;t enough to get into your account.</p>
+</div>
+<div class="paragraph">
+<p>If GitHub asks, follow its steps. It will give you some recovery codes, which let you
+back in if you lose your phone. Keep them somewhere safe, away from your computer,
+such as a password manager or a printed copy.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s worth turning on even if GitHub doesn&#8217;t ask. You can find it under your profile
+picture, in Settings → Password and authentication.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_create_a_home_for_your_website">Create a home for your website</h2>
+<div class="paragraph">
+<p>GitHub keeps each project&#8217;s files in a <em>repository</em>. For now, think of it as a folder
+on GitHub that keeps a record of every change you make to it.</p>
+</div>
+<div class="paragraph">
+<p>Click the “+” button near the top-right corner of the page, then choose “New
+repository”.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/github-new-repository.png" alt="GitHub&#8217;s Create a new repository form. The Owner shows the signed-in account, blurred here, and the Repository name box beside it is empty. Below, visibility is set to Public, there&#8217;s no template, and Add README is switched off.">
+</div>
+<div class="title">The form for a new repository</div>
+</div>
+<div class="paragraph">
+<p>The repository&#8217;s name decides your website&#8217;s address. Name it with your username,
+followed by <code>.github.io</code>. If your username is <code>sam-smith</code>, for example, the repository
+is <code>sam-smith.github.io</code>, and the website will be at <code>https://sam-smith.github.io/</code>.
+Use lower-case letters, even if your username contains capitals.</p>
+</div>
+<div class="paragraph">
+<p>Set the visibility to “Public”. Free GitHub accounts can only publish public
+repositories, which means anyone can read the files you put there.</p>
+</div>
+<div class="paragraph">
+<p>Turn on “Add README”. This adds a short text file describing the repository. You
+don&#8217;t need to change any other settings.</p>
+</div>
+<div class="paragraph">
+<p>Click “Create repository”.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>You can see your new repository, named after your username and ending in <code>.github.io</code>.
+Its file list contains <code>README.md</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Each GitHub account can have only one repository named this way. If you&#8217;ve
+made one before, you can reuse it, but its existing files will be replaced as you
+work through this book. The book&#8217;s examples assume your website lives at the root of
+an address like <code>https://sam-smith.github.io/</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_upload_your_page">Upload your page</h2>
+<div class="paragraph">
+<p>Now copy your page into the repository. In your repository, click “Add file”, then
+“Upload files”.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/github-upload.png" alt="GitHub&#8217;s upload page, with a large area saying Drag files here to add them to your repository, or choose your files. Below it, a Commit changes box has a commit message field, a description field, the option Commit directly to the main branch selected, and a green Commit changes button.">
+</div>
+<div class="title">The Upload files page</div>
+</div>
+<div class="paragraph">
+<p>Open your <code>my-website</code> folder in File Explorer or Finder, and drag <code>index.html</code> onto
+the upload area in your browser. You can also click “choose your files” and select it.</p>
+</div>
+<div class="paragraph">
+<p>GitHub saves changes as <em>commits</em>. A commit is a record of what changed, when and why,
+and GitHub keeps every one. Below the upload area, enter <code>Add my first page</code> as the
+commit message. A commit message is a short description of the change; write it as
+if finishing the sentence “This commit will&#8230;&#8203;”.</p>
+</div>
+<div class="paragraph">
+<p>Leave the option to commit directly to the <code>main</code> branch selected. <code>main</code> is the
+version of your project that GitHub will publish. Then click “Commit changes”.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>The repository&#8217;s file list now contains <code>README.md</code> and <code>index.html</code>. Clicking
+<code>index.html</code> shows your HTML.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/github-first-upload.png" alt="GitHub&#8217;s file list showing README.md with the message Initial commit, and index.html with the message Add my first page.">
+</div>
+<div class="title">The file list after your first upload</div>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_publish_with_github_pages">Publish with GitHub Pages</h2>
+<div class="paragraph">
+<p>Because your repository is named after your username, GitHub usually turns on Pages for
+it by itself, as soon as it has a file to publish. Check the settings anyway, so you know
+where they are.</p>
+</div>
+<div class="paragraph">
+<p>Click “Settings” in your repository&#8217;s tabs, then “Pages” in the sidebar. You&#8217;ll find
+it under “Code, planning, and automation”.</p>
+</div>
+<div class="paragraph">
+<p>Under “Build and deployment”, check the settings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Source: “Deploy from a branch”</p>
+</li>
+<li>
+<p>Branch: <code>main</code></p>
+</li>
+<li>
+<p>Folder: <code>/ (root)</code></p>
+</li>
+</ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/github-pages-branch.png" alt="The Pages section of a repository&#8217;s Settings, with Code, planning, and automation in the sidebar. Under Build and deployment, the Source is Deploy from a branch, and the Branch settings show main and / (root), with a Save button.">
+</div>
+<div class="title">Pages publishing from the main branch</div>
+</div>
+<div class="paragraph">
+<p>If any of these are different, change them and click “Save”. <em>Root</em> means the top
+level of your repository, where you uploaded <code>index.html</code>.</p>
+</div>
+<div class="paragraph">
+<p>Remember that anyone with the address will be able to see this website. Check that
+you&#8217;re happy to share what you&#8217;ve written.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_visit_your_website">Visit your website</h2>
+<div class="paragraph">
+<p>Publishing takes a few minutes. Wait a little, then refresh the Pages settings. When
+your website is ready, you&#8217;ll see its address with a “Visit site” button.</p>
+</div>
+<div class="paragraph">
+<p>Click “Visit site”.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your website shows your heading and introductory sentence. The address is your
+username followed by <code>.github.io</code>, rather than a <code>file://</code> address.</p>
+</div>
+<div class="paragraph">
+<p>If you see a “404” or “Page not found” message, wait a few minutes and refresh. It can
+take up to ten minutes. If the page still doesn&#8217;t appear, check that the repository&#8217;s
+name exactly matches your username, that the file is called <code>index.html</code>, and that
+the Pages settings match the list above.</p>
+</div>
+<div class="paragraph">
+<p>Bookmark your website&#8217;s address, and bookmark your repository too. You&#8217;ll share the
+website&#8217;s address with visitors; the repository is where you&#8217;ll go to publish changes.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ve published your first web page. It&#8217;s plain, but it&#8217;s yours, and anyone in the
+world can visit it.</p>
+</div>
+</div>
+<div class="sect2">
+<h2 id="_publish_a_change">Publish a change</h2>
+<div class="paragraph">
+<p>You now have two copies of your page: the one on your computer, where you work, and
+the one on GitHub, which is published. To publish a change, you update your copy,
+check it, then upload it again.</p>
+</div>
+<div class="paragraph">
+<p>In VS Code, add a second paragraph after the first one:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="html"><span class="line" style="padding-left: 2ch; text-indent: -2ch"><span class="nt">&lt;p&gt;</span>Here is something else about my subject.<span class="nt">&lt;/p&gt;</span>
+</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Replace the sentence with something you&#8217;d like to say about your subject. Save, then
+check it in your browser using the <code>file://</code> address.</p>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re happy with it, go to your repository and upload <code>index.html</code> again, using
+“Add file” and “Upload files” as before. GitHub replaces the existing file with your
+new version. Enter a commit message such as <code>Add a second paragraph</code>, and commit the
+change.</p>
+</div>
+<div class="paragraph">
+<p>Wait for it to publish, then refresh your website.</p>
+</div>
+<div class="paragraph">
+<div class="title">Checkpoint</div>
+<p>Your published website shows both paragraphs.</p>
+</div>
+<div class="paragraph">
+<p>From now on, you&#8217;ll make changes on your computer, where you can check them as often
+as you like, and upload them when you&#8217;re ready to publish. Nobody sees your work in
+progress, and you won&#8217;t have to wait for GitHub each time you make an edit.</p>
+</div>
+</div>
+</div>
+</div><nav class="chapter-nav" aria-label="Chapters"><a class="prev" href="write-your-first-web-page.html"><small>Previous</small>Write your first web page</a><a class="next" href="grow-your-website.html"><small>Next</small>Grow your website</a></nav>
+</main>
+<footer class="site-footer"><div class="inner">
+<p>Build your first website, by Steve Hill. Published by Phosphene, <a href="https://phosphene.uk/">phosphene.uk</a>.</p>
+<p>Part 1 is free to read. The whole book continues in the paperback, PDF and ebook editions.</p>
+</div></footer>
+</body>
+</html>
