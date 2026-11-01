@@ -57,14 +57,15 @@ code, pre { font-variant-ligatures: none; font-feature-settings: "calt" 0, "liga
 .imageblock img { display: block; width: 100%; height: auto; border: 0.5pt solid var(--rule); }
 .imageblock .title { font: 8.5pt/1.35 var(--sans); color: var(--slate); margin-top: 0.4em; }
 
-/* Checkpoints are paragraphs titled "Checkpoint". */
+/* Checkpoints are paragraphs titled "Checkpoint"; the build marks them with a class,
+   because e-readers don't support :has(). */
 .paragraph > .title {
   font: 15pt/1 Caveat, cursive; color: var(--slate); margin-bottom: 0.15em;
 }
-.paragraph:has(> .title) {
+.checkpoint {
   background: var(--citron-pale); border-radius: 4pt; padding: 0.45em 0.8em 0.35em; margin: 0.9em 0 1em;
 }
-.paragraph:has(> .title) p { margin: 0; }
+.checkpoint p { margin: 0; }
 
 .admonitionblock { margin: 0.9em 0; border-left: 2.5pt solid var(--citron); padding-left: 0.8em; }
 .admonitionblock table, .admonitionblock tr, .admonitionblock td { display: block; padding: 0; }

@@ -53,3 +53,4 @@ table.tableblock { font-size: 0.9rem; }
 
 .site-footer { border-top: 1px solid var(--rule); font: 0.85rem/1.5 var(--sans); color: var(--slate); padding: 1.5rem 0 2rem; }
 .site-footer p { margin: 0 0 0.5rem; }
+.version h2 small { font: 0.85rem var(--sans); color: var(--slate); margin-left: 0.4rem; }
